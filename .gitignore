@@ -31,6 +31,7 @@ play/src/i18n/ko-KR/*.backup
 /.env
 /wa/
 /wa-data/
+/dev.sh
 deploy/coturn/turnserver.conf
 deploy/status/www/status.json
 deploy/out/

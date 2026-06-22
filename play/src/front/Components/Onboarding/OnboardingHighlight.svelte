@@ -479,6 +479,15 @@
             case "pictureInPicture":
                 element = document.querySelector('[data-testid="pictureInPictureButton"]');
                 break;
+            case "menuTopLeft":
+                element = document.querySelector('[data-testid="chat-action"]');
+                break;
+            case "mediaControls":
+                element = document.querySelector('[data-testid="media-hardware"]');
+                break;
+            case "topRightMenu":
+                element = document.querySelector('[data-testid="profile-menu"]');
+                break;
             default:
                 element = null;
         }

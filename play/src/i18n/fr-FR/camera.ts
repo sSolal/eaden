@@ -9,8 +9,8 @@ const camera: DeepPartial<Translation["camera"]> = {
     disabled: "Desactivé",
     notRecommended: "Non recommandé",
     enable: {
-        title: "Allumez votre caméra et votre microphone",
-        start: "Bienvenue sur notre page de configuration des périphériques audio et vidéo ! Trouvez ici les outils pour optimiser votre expérience en ligne. Ajustez les paramètres selon vos préférences pour résoudre les problèmes éventuels. Assurez-vous que votre matériel est bien connecté et à jour. Explorez et testez différentes configurations pour trouver celle qui convient le mieux.",
+        title: "Configurez votre caméra et votre micro",
+        start: "Tu n'es pas du tout obligé(e) de les utiliser — tu peux parfaitement rester sans. Mais autoriser l'accès maintenant te permettra de rejoindre une conversation vidéo plus tard en un clic, sans avoir à régler les autorisations du navigateur. Tu pourras tout changer à tout moment.",
     },
     help: {
         title: "Accès à la caméra / au microphone nécessaire",

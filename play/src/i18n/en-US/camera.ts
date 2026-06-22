@@ -8,8 +8,8 @@ const camera: BaseTranslation = {
     disabled: "Disabled",
     notRecommended: "Not recommended",
     enable: {
-        title: "Turn on your camera and microphone",
-        start: "Welcome to our audio and video device configuration page! Find the tools here to enhance your online experience. Adjust settings to your preferences to address any potential issues. Ensure your hardware is properly connected and up to date. Explore and test different configurations to find what works best for you.",
+        title: "Set up your camera & microphone",
+        start: "You're under no obligation to turn these on — you can hang out just fine without them. But granting access now means you can jump into a video chat later with a single click, without fiddling with browser permissions. You can change all of this anytime.",
     },
     help: {
         title: "Camera / Microphone access needed",

@@ -17,8 +17,13 @@ export const movementKeysPressedStore = derived(pressedKeysStore, ($keys) => $ke
 
 export type OnboardingStep =
     | "welcome"
+    | "atmosphere"
     | "movement"
     | "communication"
+    | "menuTopLeft"
+    | "mediaControls"
+    | "topRightMenu"
+    // Kept for reference / restart compatibility, no longer part of the default flow:
     | "lockBubble"
     | "screenSharing"
     | "pictureInPicture"
@@ -64,8 +69,17 @@ function createOnboardingStore() {
 
         const mobile = get(isMobileOnboarding);
         const steps: OnboardingStep[] = mobile
-            ? (["welcome", "movement", "communication", "complete"] as OnboardingStep[])
-            : ["welcome", "movement", "communication", "lockBubble", "screenSharing", "pictureInPicture", "complete"];
+            ? (["welcome", "atmosphere", "movement", "communication", "complete"] as OnboardingStep[])
+            : [
+                  "welcome",
+                  "atmosphere",
+                  "movement",
+                  "communication",
+                  "menuTopLeft",
+                  "mediaControls",
+                  "topRightMenu",
+                  "complete",
+              ];
 
         const currentIndex = steps.indexOf(current);
 

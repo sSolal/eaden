@@ -203,7 +203,7 @@
         >
             <section class="mb-4 text-center">
                 <h2 class="h4">{$LL.camera.enable.title()}</h2>
-                <p class="opacity-50 w-2/3 m-auto pt-2 hidden md:block">
+                <p class="opacity-50 w-2/3 m-auto pt-2">
                     {$LL.camera.enable.start()}
                 </p>
             </section>

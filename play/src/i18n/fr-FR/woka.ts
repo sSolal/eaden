@@ -11,7 +11,7 @@ const woka: DeepPartial<Translation["woka"]> = {
         randomize: "Aléatoire",
     },
     selectWoka: {
-        title: "Sélectionnez votre Woka",
+        title: "À quoi voulez-vous ressembler ?",
         continue: "Continuer",
         customize: "Personnaliser",
         randomize: "Sélectionner aléatoirement",

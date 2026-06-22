@@ -22,6 +22,9 @@
     let startValidating = $state(false);
     let errorName = $state("");
 
+    const savedName = gameManager.getPlayerName();
+    const isReturning = savedName != null && savedName !== "";
+
     let logo = gameManager.currentStartedRoom.loginSceneLogo ?? logoImg;
     let legals = gameManager.currentStartedRoom?.legals ?? {};
 
@@ -115,6 +118,19 @@
     }}
 >
     <div class="w-full sm:w-96 md:w-10/12 lg:w-1/2 xl:w-1/3 rounded mx-auto text-center p-8">
+        <section class="text-center flex h-fit flex-col justify-center items-center mb-6 gap-3">
+            <h1 class="text-white text-3xl bold m-0">
+                {$LL.login.welcome.title()}
+            </h1>
+            <p class="text-white/90 text-base m-0 leading-relaxed">
+                {$LL.login.welcome.intro()}
+            </p>
+            {#if !isReturning}
+                <p class="text-white/70 text-sm m-0 leading-relaxed">
+                    {$LL.login.welcome.firstTime()}
+                </p>
+            {/if}
+        </section>
         <section class="text-center flex h-fit flex-col justify-center items-center mb-0">
             <span class="text-white text-lg bold">
                 {$LL.login.input.name.placeholder()}

@@ -9,15 +9,16 @@
     import { currentPlayerGroupIdStore } from "../../Stores/CurrentPlayerGroupStore";
     import { inJitsiStore, inLivekitStore, silentStore } from "../../Stores/MediaStore";
     import type { GameScene } from "../../Phaser/Game/GameScene";
+    import LL from "../../../i18n/i18n-svelte";
     import OnboardingStep from "./OnboardingStep.svelte";
     import OnboardingHighlight from "./OnboardingHighlight.svelte";
     import WelcomeStep from "./Steps/WelcomeStep.svelte";
+    import InfoStep from "./Steps/InfoStep.svelte";
     import MovementStep from "./Steps/MovementStep.svelte";
     import CommunicationStep from "./Steps/CommunicationStep.svelte";
-    import LockBubbleStep from "./Steps/LockBubbleStep.svelte";
-    import ScreenSharingStep from "./Steps/ScreenSharingStep.svelte";
-    import PictureInPictureStep from "./Steps/PictureInPictureStep.svelte";
     import CompleteStep from "./Steps/CompleteStep.svelte";
+    // Note: LockBubbleStep, ScreenSharingStep and PictureInPictureStep components remain in the
+    // repo but are intentionally no longer part of the onboarding flow.
 
     let movementTimeout: ReturnType<typeof setTimeout> | null = null;
     let onboardingHighlight: OnboardingHighlight | null = $state(null);
@@ -119,16 +120,38 @@
 <OnboardingStep>
     {#if $onboardingStore === "welcome"}
         <WelcomeStep onnext={handleNext} onskip={handleSkip} />
+    {:else if $onboardingStore === "atmosphere"}
+        <InfoStep
+            title={$LL.onboarding.atmosphere.title()}
+            description={$LL.onboarding.atmosphere.description()}
+            next={$LL.onboarding.atmosphere.next()}
+            onnext={handleNext}
+        />
     {:else if $onboardingStore === "movement"}
         <MovementStep onnext={handleNext} />
     {:else if $onboardingStore === "communication"}
         <CommunicationStep onnext={handleNext} />
-    {:else if $onboardingStore === "lockBubble"}
-        <LockBubbleStep onnext={handleNext} />
-    {:else if $onboardingStore === "screenSharing"}
-        <ScreenSharingStep onnext={handleNext} />
-    {:else if $onboardingStore === "pictureInPicture"}
-        <PictureInPictureStep onnext={handleNext} />
+    {:else if $onboardingStore === "menuTopLeft"}
+        <InfoStep
+            title={$LL.onboarding.menuTopLeft.title()}
+            description={$LL.onboarding.menuTopLeft.description()}
+            next={$LL.onboarding.menuTopLeft.next()}
+            onnext={handleNext}
+        />
+    {:else if $onboardingStore === "mediaControls"}
+        <InfoStep
+            title={$LL.onboarding.mediaControls.title()}
+            description={$LL.onboarding.mediaControls.description()}
+            next={$LL.onboarding.mediaControls.next()}
+            onnext={handleNext}
+        />
+    {:else if $onboardingStore === "topRightMenu"}
+        <InfoStep
+            title={$LL.onboarding.topRightMenu.title()}
+            description={$LL.onboarding.topRightMenu.description()}
+            next={$LL.onboarding.topRightMenu.next()}
+            onnext={handleNext}
+        />
     {:else if $onboardingStore === "complete"}
         <CompleteStep onnext={handleNext} />
     {/if}

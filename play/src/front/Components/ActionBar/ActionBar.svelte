@@ -75,7 +75,7 @@
 
                         <div>
                             <!-- ACTION WRAPPER : CAM & MIC -->
-                            <div class="group/hardware flex items-center relative">
+                            <div class="group/hardware flex items-center relative" data-testid="media-hardware">
                                 {#if !$inExternalServiceStore && $proximityMeetingStore && $myMicrophoneStore}
                                     <MicrophoneMenuItem />
                                 {/if}

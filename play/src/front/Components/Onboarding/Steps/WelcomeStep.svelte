@@ -1,7 +1,6 @@
 <script lang="ts">
     import { fly } from "svelte/transition";
     import LL from "../../../../i18n/i18n-svelte";
-    import { gameManager } from "../../../Phaser/Game/GameManager";
     import { isMobileOnboarding } from "../../../Stores/OnboardingStore";
 
     interface Props {
@@ -10,8 +9,6 @@
     }
 
     const { onnext, onskip }: Props = $props();
-
-    let worldName: string = gameManager.getCurrentGameScene()?.room?.roomName ?? "WorkAdventure";
 
     function handleNext() {
         onnext?.();
@@ -35,7 +32,7 @@
     >
         <div class="text-center space-y-6">
             <h2 class="text-3xl font-bold text-white mb-4">
-                {$LL.onboarding.welcome.title({ worldName })}
+                {$LL.onboarding.welcome.title()}
             </h2>
             <p class="text-lg text-white/90 leading-relaxed">
                 {$LL.onboarding.welcome.description()}

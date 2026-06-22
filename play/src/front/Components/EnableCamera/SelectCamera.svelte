@@ -5,7 +5,6 @@
     import Chip from "../UI/Chip.svelte";
     import { IconCheck, IconVideoOff } from "@wa-icons";
 
-    let editMode = $state(false);
     interface Props {
         selectedDevice?: string | undefined;
         deviceList: MediaDeviceInfo[];
@@ -26,33 +25,20 @@
         <div class="grow pe-8 ps-2">
             {@render title?.()}
         </div>
-        <button
-            class="btn {!editMode ? 'btn-secondary' : 'btn-light btn-ghost'}"
-            onclick={(event) => {
-                event.stopPropagation();
-                event.preventDefault();
-                editMode = !editMode;
-            }}
-        >
-            {!editMode ? $LL.actionbar.edit() : $LL.actionbar.cancel()}
-        </button>
     </div>
     <div class="flex items-center justify-center">
         <div class="flex flex-wrap items-center justify-center min-h-[129px]">
             <!-- svelte-ignore a11y_click_events_have_key_events -->
             <!-- svelte-ignore a11y_no_static_element_interactions -->
             <div
-                class="border border-solid border-white w-full rounded-lg m-2 items-center justify-start transition-all overflow-hidden cursor-pointer relative px-8 py-6 space-x-4 {!selectedDevice
+                class="flex flex-col border border-solid border-white w-full rounded-lg m-2 items-center justify-start transition-all overflow-hidden cursor-pointer relative px-8 py-6 space-x-4 {!selectedDevice
                     ? 'bg-white text-secondary border-none'
                     : 'hover:bg-white/10'}"
-                class:hidden={!editMode && selectedDevice}
-                class:flex,flex-col={editMode || !selectedDevice}
                 onclick={() => {
                     onselectdevice?.(undefined);
-                    editMode = false;
                 }}
             >
-                {#if !editMode && !selectedDevice}
+                {#if !selectedDevice}
                     <div
                         class="webrtcsetup flex items-center justify-center h-[200px] w-full aspect-video overflow-hidden bg-contrast"
                     >
@@ -85,18 +71,15 @@
                 <!-- svelte-ignore a11y_click_events_have_key_events -->
                 <!-- svelte-ignore a11y_no_static_element_interactions -->
                 <div
-                    class="border border-solid w-full rounded-lg relative justify-start m-2 space-x-4 transition-all overflow-hidden cursor-pointer {selectedDevice ===
+                    class="flex flex-col border border-solid w-full rounded-lg relative justify-start m-2 space-x-4 transition-all overflow-hidden cursor-pointer {selectedDevice ===
                     device.deviceId
                         ? 'bg-white text-secondary border-none '
                         : 'border-white hover:bg-white/10'}"
-                    class:hidden={!editMode && selectedDevice !== device.deviceId}
-                    class:flex,flex-col={editMode || selectedDevice === device.deviceId}
                     onclick={() => {
                         onselectdevice?.(device.deviceId);
-                        editMode = false;
                     }}
                 >
-                    {#if !editMode && device.deviceId === selectedDevice}
+                    {#if device.deviceId === selectedDevice}
                         <div class="top-0 left-0 w-full">
                             {@render widget?.()}
                         </div>
@@ -114,7 +97,7 @@
                         <div class="space-y-1">
                             <div
                                 class="text-lg bold truncate leading-tight"
-                                style:width={!editMode && selectedDevice === device.deviceId ? "251px" : "auto"}
+                                style:width={selectedDevice === device.deviceId ? "251px" : "auto"}
                             >
                                 {StringUtils.normalizeDeviceName(device.label)}
                             </div>

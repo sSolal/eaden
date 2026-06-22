@@ -241,7 +241,7 @@
 
                 <div class="flex flex-col flex-1 h-full min-h-0 min-w-0">
                     <div class="rounded-lg flex flex-col flex-1 min-h-0 min-w-0">
-                        <h3 class="text-lg font-semibold capitalize">Woka</h3>
+                        <h3 class="text-lg font-semibold">{$LL.woka.selectWoka.title()}</h3>
                         <div
                             class="flex-none lg:flex-1 flex flex-col items-start gap-0 min-h-0 min-w-0 max-h-full overflow-y-scroll overflow-x-auto scroll-mask py-[20px]"
                         >

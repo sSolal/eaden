@@ -10,7 +10,7 @@ const woka: BaseTranslation = {
         randomize: "Randomize",
     },
     selectWoka: {
-        title: "Select your WOKA",
+        title: "What do you (want to) look like?",
         continue: "Continue",
         customize: "Build your WOKA",
         randomize: "Select Randomly",

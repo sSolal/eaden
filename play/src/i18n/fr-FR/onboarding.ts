@@ -2,11 +2,17 @@ import type { Translation } from "../i18n-types";
 
 export default {
     welcome: {
-        title: "Bienvenue sur {worldName} ! 🚀",
+        title: "Bienvenue sur EAden ! 🌱",
         description:
-            "Préparez-vous à explorer un monde virtuel où vous pouvez vous déplacer, discuter avec d'autres personnes et collaborer en temps réel. Faisons un petit tour pour vous aider à démarrer !",
+            "C'est un groupe chaleureux où l'on se retrouve pour discuter de philosophie, d'altruisme et de plein d'autres choses. Faisons un petit tour pour t'aider à t'installer !",
         start: "C'est parti !",
         skip: "Passer le tutoriel",
+    },
+    atmosphere: {
+        title: "Fais comme chez toi",
+        description:
+            "Ce n'est pas un appel Zoom — imagine plutôt un vrai café ou un salon douillet. Tu peux t'approcher des gens, traîner un peu, t'installer pour travailler, ou simplement flâner. Ça prend un petit moment pour s'y habituer, mais on espère que tu te sentiras vite chez toi !",
+        next: "Suivant",
     },
     movement: {
         title: "Se déplacer",
@@ -46,6 +52,23 @@ export default {
         video: "./static/Videos/PictureInPicture.mp4",
         hint: "Cliquez sur le bouton PiP mis en évidence pour l'activer !",
         next: "Suivant",
+    },
+    menuTopLeft: {
+        title: "Discussion & qui est là",
+        description:
+            "En haut à gauche, tu trouveras le chat de la salle — écris un message quand tu veux — ainsi que la liste de toutes les personnes connectées en ce moment.",
+        next: "Suivant",
+    },
+    mediaControls: {
+        title: "Ta caméra & ton micro",
+        description: "Cette rangée en haut te permet d'activer ou de couper ta caméra et ton micro quand tu veux.",
+        next: "Suivant",
+    },
+    topRightMenu: {
+        title: "Réglages & aide",
+        description:
+            "Depuis le menu en haut à droite, tu peux changer ton apparence, ajuster tes réglages, ou obtenir de l'aide quand tu en as besoin.",
+        next: "Compris !",
     },
     complete: {
         title: "Vous êtes prêt ! 🎉",
