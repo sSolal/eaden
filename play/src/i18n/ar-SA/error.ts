@@ -5,12 +5,12 @@ const error: DeepPartial<Translation["error"]> = {
     accessLink: {
         title: "رابط الوصول غير صالح", // Invalid access link
         subTitle: "لم يتم العثور على الخريطة. يرجى التحقق من رابط الوصول الخاص بك.", // Map could not be found. Please check your access link.
-        details: "لمزيد من المعلومات، يرجى الاتصال بالمسؤولين أو الاتصال بنا على: hello@workadventu.re", // For more information, please contact the administrators or reach out to us at: hello@workadventu.re
+        details: "لمزيد من المعلومات، يرجى الاتصال بالمسؤولين.", // For more information, please contact the administrators.
     },
     connectionRejected: {
         title: "تم رفض الاتصال", // Connection rejected
         subTitle: "لا يمكنك دخول هذا العالم. حاول مرة أخرى لاحقًا {error}.", // You cannot enter this world. Please try again later {error}.
-        details: "لمزيد من المعلومات، يرجى الاتصال بالمسؤولين أو الاتصال بنا على: hello@workadventu.re", // For more information, please contact the administrators or reach out to us at: hello@workadventu.re
+        details: "لمزيد من المعلومات، يرجى الاتصال بالمسؤولين.", // For more information, please contact the administrators.
     },
     connectionRetry: {
         unableConnect: "فُقد الاتصال بالخادم. لن تتمكن من التحدث مع الآخرين.", // Connection to server lost. You won't be able to speak to others.

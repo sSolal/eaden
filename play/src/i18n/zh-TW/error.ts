@@ -5,12 +5,12 @@ const error: DeepPartial<Translation["error"]> = {
     accessLink: {
         title: "存取連結錯誤",
         subTitle: "找不到地圖。請檢查你的存取連結。",
-        details: "如果你想了解更多資訊，可以聯絡管理員或聯絡我們：hello@workadventu.re",
+        details: "如果你想了解更多資訊，可以聯絡管理員。",
     },
     connectionRejected: {
         title: "連線被拒絕",
         subTitle: "你無法加入該世界。請稍後重試 {error}。",
-        details: "如果你想了解更多資訊，可以聯絡管理員或聯絡我們：hello@workadventu.re",
+        details: "如果你想了解更多資訊，可以聯絡管理員。",
     },
     connectionRetry: {
         unableConnect: "與伺服器的連線已中斷。你將無法與其他人交談。",

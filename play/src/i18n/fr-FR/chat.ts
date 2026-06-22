@@ -635,7 +635,7 @@ const chat: DeepPartial<Translation["chat"]> = {
     },
     remoteUserNotConnected: "Utilisateur non connecté. Impossible d'envoyer un message.",
     matrixSettings: {
-        title: "Matrix & WorkAdventure",
+        title: "Matrix & EAden",
         subtitle: "Votre identité de chat et votre profil Matrix",
         close: "Fermer",
         identitySection: "Identité",
@@ -644,7 +644,7 @@ const chat: DeepPartial<Translation["chat"]> = {
         copy: "Copier",
         copied: "Copié",
         profileSection: "Profil Matrix",
-        accountDataSection: "WorkAdventure (dans le jeu)",
+        accountDataSection: "EAden (dans le jeu)",
         displayName: "Nom d’affichage",
         avatar: "Avatar (MXC)",
         localName: "Nom dans le jeu",
@@ -669,7 +669,7 @@ const chat: DeepPartial<Translation["chat"]> = {
         publishWokaToMatrixProfileButton: "Appliquer le nom et l’image WOKA au profil Matrix",
         publishWokaToMatrixProfilePublishing: "Mise à jour du profil…",
         publishWokaToMatrixProfileConfirmWarning:
-            "Cette action remplace le nom d’affichage et l’avatar de votre profil Matrix sur le serveur. Un nom ou une photo définis ailleurs (par ex. dans Element) seront écrasés. Ne continuez que si vous acceptez que votre nom WorkAdventure et votre WOKA deviennent votre profil Matrix public.",
+            "Cette action remplace le nom d’affichage et l’avatar de votre profil Matrix sur le serveur. Un nom ou une photo définis ailleurs (par ex. dans Element) seront écrasés. Ne continuez que si vous acceptez que votre nom EAden et votre WOKA deviennent votre profil Matrix public.",
         publishWokaToMatrixProfileCancelButton: "Annuler",
         publishWokaToMatrixProfileConfirmActionButton: "Écraser et appliquer",
         actionDone: "Terminé",

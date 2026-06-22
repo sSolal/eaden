@@ -6,13 +6,13 @@ const error: DeepPartial<Translation["error"]> = {
         title: "Toegangskoppeling onjuist",
         subTitle: "Kaart niet gevonden. Controleer je toegangskoppeling.",
         details:
-            "Als je meer informatie wilt, kun je contact opnemen met de beheerder of ons bereiken via: hello@workadventu.re",
+            "Als je meer informatie wilt, kun je contact opnemen met de beheerder.",
     },
     connectionRejected: {
         title: "Verbinding afgewezen",
         subTitle: "Je kunt de Wereld niet betreden. Probeer het later opnieuw {error}.",
         details:
-            "Als je meer informatie wilt, kun je contact opnemen met de beheerder of ons bereiken via: hello@workadventu.re",
+            "Als je meer informatie wilt, kun je contact opnemen met de beheerder.",
     },
     connectionRetry: {
         unableConnect: "Verbinding met de server verloren. Je kunt niet met anderen praten.",

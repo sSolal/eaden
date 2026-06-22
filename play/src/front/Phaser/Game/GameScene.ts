@@ -4334,8 +4334,8 @@ ${escapedMessage}
                 type: "error",
                 code: "USER_BANNED",
                 title: "BANNED",
-                subtitle: "You were banned from WorkAdventure",
-                details: "If you want more information, you may contact us at: hello@workadventu.re",
+                subtitle: "You were banned from EAden",
+                details: "If you want more information, you may contact the administrator.",
             }),
         );
 

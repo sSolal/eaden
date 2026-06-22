@@ -4,12 +4,12 @@ const error: BaseTranslation = {
     accessLink: {
         title: "Access link incorrect",
         subTitle: "Could not find map. Please check your access link.",
-        details: "If you want more information, you may contact administrator or contact us at: hello@workadventu.re",
+        details: "If you want more information, you may contact the administrator.",
     },
     connectionRejected: {
         title: "Connection rejected",
         subTitle: "You cannot join the World. Try again later {error}.",
-        details: "If you want more information, you may contact administrator or contact us at: hello@workadventu.re",
+        details: "If you want more information, you may contact the administrator.",
     },
     connectionRetry: {
         unableConnect: "Connection to server lost. You won't be able to speak to others.",

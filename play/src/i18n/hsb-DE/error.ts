@@ -6,13 +6,13 @@ const error: DeepPartial<Translation["error"]> = {
         title: "njepłaćiwy přistupny link",
         subTitle: "Karta njeje so namakała. Pruwuj prošu swój přistupny link.",
         details:
-            "Za dalše informacije móžeš so z administratorami skontaktować abo přizjew so pola nas pod: hello@workadventu.re",
+            "Za dalše informacije móžeš so z administratorami skontaktować.",
     },
     connectionRejected: {
         title: "zwiski wotpokazali",
         subTitle: "Njemóžeš do tuteho swěta zastupić. Spytaj pozdźišo hišće raz {error}.",
         details:
-            "Za dalše informacije móžeš so z administratorami skontaktować abo přizjew so pola nas pod: hello@workadventu.re",
+            "Za dalše informacije móžeš so z administratorami skontaktować.",
     },
     connectionRetry: {
         unableConnect: "Zwisk k serweru je so zhubił. Njemóžeš z druhimi rěčeć.",

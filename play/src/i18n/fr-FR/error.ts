@@ -6,13 +6,13 @@ const error: DeepPartial<Translation["error"]> = {
         title: "Lien d'accès incorrect",
         subTitle: "Impossible de trouver la carte. Veuillez vérifier votre lien d'accès.",
         details:
-            "Si vous souhaitez obtenir de plus amples informations, vous pouvez contacter l'administrateur ou nous contacter à l'adresse suivante: hello@workadventu.re",
+            "Si vous souhaitez obtenir de plus amples informations, vous pouvez contacter l'administrateur.",
     },
     connectionRejected: {
         title: "Connexion rejetée",
         subTitle: "Vous ne pouvez pas rejoindre le monde. Réessayer plus tard {error}.",
         details:
-            "Si vous souhaitez obtenir de plus amples informations, vous pouvez contacter l'administrateur ou nous contacter à l'adresse suivante: hello@workadventu.re",
+            "Si vous souhaitez obtenir de plus amples informations, vous pouvez contacter l'administrateur.",
     },
     connectionRetry: {
         unableConnect: "Connexion au serveur perdue. Vous ne pourrez pas parler aux autres.",

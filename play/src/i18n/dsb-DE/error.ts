@@ -6,13 +6,13 @@ const error: DeepPartial<Translation["error"]> = {
         title: "Link za pśistup njejo płaśecy",
         subTitle: "Kórta njejo se namakała. Pśespytuj link za pśistup.",
         details:
-            "Dla dalšnych informacijow wobroś se na administratory abo pśipowěź se pla nas pód adresu: hello@workadventu.re",
+            "Dla dalšnych informacijow wobroś se na administratory.",
     },
     connectionRejected: {
         title: "Zwězanje njejo zwólone",
         subTitle: "Ty njamóžoš do togo swěta stupiś. Wopytaj pózdźej hyšći raz {error}.",
         details:
-            "Dla dalšnych informacijow wobroś se na administratory abo pśipowěź se pla nas pód adresu: hello@workadventu.re",
+            "Dla dalšnych informacijow wobroś se na administratory.",
     },
     connectionRetry: {
         unableConnect: "Zwězanje k serweru jo se zgubiło. Njemóžoš z drugimi rěcaś.",

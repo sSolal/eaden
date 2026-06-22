@@ -6,13 +6,13 @@ const error: DeepPartial<Translation["error"]> = {
         title: "Link di accesso errato",
         subTitle: "Mappa non trovata. Si prega di controllare il link di accesso.",
         details:
-            "Se desideri maggiori informazioni, puoi contattare l'amministratore o contattarci a: hello@workadventu.re",
+            "Se desideri maggiori informazioni, puoi contattare l'amministratore.",
     },
     connectionRejected: {
         title: "Connessione rifiutata",
         subTitle: "Non puoi entrare nel Mondo. Riprova più tardi {error}.",
         details:
-            "Se desideri maggiori informazioni, puoi contattare l'amministratore o contattarci a: hello@workadventu.re",
+            "Se desideri maggiori informazioni, puoi contattare l'amministratore.",
     },
     connectionRetry: {
         unableConnect: "Connessione al server persa. Non potrai parlare con gli altri.",

@@ -56,9 +56,9 @@ const menu: BaseTranslation = {
             echoCancellation: "Cancelamento de eco",
             enableNoiseSuppression: "Ativar supressão de ruído",
             noiseSuppressionMode: "Modo de supressão de ruído:",
-            workAdventureNoiseSuppression: "Supressão de ruído do WorkAdventure",
+            workAdventureNoiseSuppression: "Supressão de ruído do EAden",
             workAdventureNoiseSuppressionDescription:
-                "Processa seu microfone com a supressão de ruído do WorkAdventure.",
+                "Processa seu microfone com a supressão de ruído do EAden.",
             recommended: "Recomendado",
             browserNoiseSuppression: "Supressão de ruído do navegador",
             browserNoiseSuppressionDescription: "Usa a supressão de ruído integrada ao navegador.",
@@ -72,7 +72,7 @@ const menu: BaseTranslation = {
         privacySettings: {
             title: "Modo ausente",
             explanation:
-                'Enquanto a guia WorkAdventure em seu navegador não estiver visível. WorkAdventure muda para "modo ausente"',
+                'Enquanto a guia EAden em seu navegador não estiver visível. EAden muda para "modo ausente"',
             cameraToggle: 'Mantenha a câmera ativa no "modo ausente"',
             microphoneToggle: 'Mantenha o microfone ativo no "modo ausente"',
         },
@@ -121,7 +121,7 @@ const menu: BaseTranslation = {
         gettingStarted: {
             title: "Começando",
             description:
-                "WorkAdventure permite que você crie um espaço online para se comunicar espontaneamente com outras pessoas. E tudo começa com a criação do seu próprio espaço. Escolha entre uma grande seleção de mapas pré-fabricados por nossa equipe.",
+                "EAden permite que você crie um espaço online para se comunicar espontaneamente com outras pessoas. E tudo começa com a criação do seu próprio espaço. Escolha entre uma grande seleção de mapas pré-fabricados por nossa equipe.",
         },
         createMap: {
             title: "Crie seu mapa",

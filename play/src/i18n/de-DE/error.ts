@@ -6,13 +6,13 @@ const error: DeepPartial<Translation["error"]> = {
         title: "Ungültiger Zugangslink",
         subTitle: "Karte konnte nicht gefunden werden. Prüfe bitte deinen Zugangslink.",
         details:
-            "Für weitere Informationen wende dich bitte an die Administratoren oder melde dich bei uns unter: hello@workadventu.re",
+            "Für weitere Informationen wende dich bitte an die Administratoren.",
     },
     connectionRejected: {
         title: "Verbindungen verweigert",
         subTitle: "Du kannst diese Welt nicht betreten. Versuche es später noch einmal {error}.",
         details:
-            "Für weitere Information wende dich bitte an die Administratoren oder melde dich bei uns unter: hello@workadventu.re",
+            "Für weitere Information wende dich bitte an die Administratoren.",
     },
     connectionRetry: {
         unableConnect: "Verbindung zum Server verloren. Du kannst nicht mit anderen sprechen.",

@@ -6,13 +6,13 @@ const error: DeepPartial<Translation["error"]> = {
         title: "Enllaç d'accés incorrecte",
         subTitle: "No s'ha trobat el mapa. Si us plau, reviseu el vostre enllaç d'accés.",
         details:
-            "Si voleu més informació, podeu contactar amb l'administrador o contacteu amb nosaltres a: hello@workadventu.re",
+            "Si voleu més informació, podeu contactar amb l'administrador.",
     },
     connectionRejected: {
         title: "Conexió rebutjada",
         subTitle: "No podeu unir-vos al Món. Intenteu-lo de nou més tard {error}.",
         details:
-            "Si voleu més informació, podeu contactar amb l'administrador o contacteu amb nosaltres a: hello@workadventu.re",
+            "Si voleu més informació, podeu contactar amb l'administrador.",
     },
     connectionRetry: {
         unableConnect: "S'ha perdut la connexió amb el servidor. No podràs parlar amb els altres.",

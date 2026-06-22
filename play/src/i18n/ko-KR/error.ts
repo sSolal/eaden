@@ -5,12 +5,12 @@ const error: DeepPartial<Translation["error"]> = {
     accessLink: {
         title: "잘못된 접근 링크",
         subTitle: "지도를 찾을 수 없습니다. 접근 링크를 확인하세요.",
-        details: "자세한 정보가 필요하면 관리자에게 문의하거나 hello@workadventu.re로 연락하세요",
+        details: "자세한 정보가 필요하면 관리자에게 문의하세요.",
     },
     connectionRejected: {
         title: "연결이 거부됨",
         subTitle: "월드에 참여할 수 없습니다. 나중에 다시 시도하세요 {error}.",
-        details: "자세한 정보가 필요하면 관리자에게 문의하거나 hello@workadventu.re로 연락하세요",
+        details: "자세한 정보가 필요하면 관리자에게 문의하세요.",
     },
     connectionRetry: {
         unableConnect: "서버 연결이 끊어졌습니다. 다른 사람들과 말할 수 없습니다.",
