@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EAden · status</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 16px/1.5 system-ui, sans-serif; max-width: 40rem; margin: 4rem auto; padding: 0 1.25rem; }
+    h1 { font-size: 1.4rem; margin: 0 0 1.5rem; }
+    .dot { display: inline-block; width: .7rem; height: .7rem; border-radius: 50%; background: #2ecc71; margin-right: .4rem; vertical-align: middle; }
+    dl { display: grid; grid-template-columns: max-content 1fr; gap: .5rem 1.25rem; margin: 0; }
+    dt { font-weight: 600; opacity: .7; }
+    dd { margin: 0; font-variant-numeric: tabular-nums; }
+    code { font-family: ui-monospace, monospace; }
+    .big { font-size: 1.6rem; font-weight: 700; }
+    footer { margin-top: 2.5rem; opacity: .6; font-size: .85rem; }
+    a { color: inherit; }
+  </style>
+</head>
+<body>
+  <h1><span class="dot"></span>EAden — deployment status</h1>
+  <div class="big" id="version">loading…</div>
+  <dl>
+    <dt>Commit</dt>        <dd><code id="commit">—</code></dd>
+    <dt>Message</dt>       <dd id="message">—</dd>
+    <dt>Deployed</dt>      <dd id="deployed">—</dd>
+    <dt>WorkAdventure</dt> <dd><code id="wa">—</code></dd>
+  </dl>
+  <footer>
+    Self-hosted, source-available (AGPL-3.0 + Commons&nbsp;Clause).
+    Source: <a id="src" href="#">repository</a>. Auto-refreshes every 30&nbsp;s.
+  </footer>
+
+  <script>
+    async function load() {
+      try {
+        // absolute path so it works with or without a trailing slash on /status;
+        // cache-bust so we always see the latest deploy
+        const r = await fetch('/status/status.json?_=' + Date.now(), { cache: 'no-store' });
+        const s = await r.json();
+        document.getElementById('version').textContent  = s.version || 'unknown';
+        document.getElementById('commit').textContent   = s.commit || '—';
+        document.getElementById('message').textContent  = s.commit_message || '—';
+        document.getElementById('deployed').textContent = s.deployed_at || '—';
+        document.getElementById('wa').textContent        = s.wa_base_version || '—';
+        const src = document.getElementById('src');
+        if (s.source) { src.href = s.source; }
+      } catch (e) {
+        document.getElementById('version').textContent = 'status.json not found yet';
+      }
+    }
+    load();
+    setInterval(load, 30000);
+  </script>
+</body>
+</html>

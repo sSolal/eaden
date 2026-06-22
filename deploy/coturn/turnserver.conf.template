@@ -1,0 +1,19 @@
+# coturn config for EATown / WorkAdventure.
+# Replace the __PLACEHOLDERS__ (or let deploy/bootstrap.sh fill them in for you).
+listening-port=3478
+fingerprint
+use-auth-secret
+static-auth-secret=__TURN_STATIC_AUTH_SECRET__
+realm=turn.__DOMAIN_BASE__
+# Public IPv4 of the server (required on cloud VMs that NAT the public IP onto a private NIC):
+external-ip=__SERVER_PUBLIC_IPV4__
+# UDP relay range — must match the firewall rule (49160-49200):
+min-port=49160
+max-port=49200
+no-cli
+no-tlsv1
+no-tlsv1_1
+# Optional hardening once it works:
+# no-multicast-peers
+# denied-peer-ip=10.0.0.0-10.255.255.255
+# denied-peer-ip=192.168.0.0-192.168.255.255

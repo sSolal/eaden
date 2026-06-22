@@ -1,0 +1,41 @@
+# EAden override for the upstream prod compose.
+# Usage (see deploy/deploy.sh, which wires this up for you):
+#   docker compose \
+#     -f contrib/docker/docker-compose.prod.yaml \
+#     -f deploy/docker-compose.eaden.yaml \
+#     --project-directory . --env-file .env up -d
+#
+# It swaps the three services you build from source to YOUR images on ghcr.io,
+# and adds a tiny status page container behind Traefik at /status.
+# (uploader + icon stay on their upstream/third-party images.)
+services:
+  play:
+    image: ghcr.io/ssolal/eaden-play:${EADEN_VERSION:-latest}
+  back:
+    image: ghcr.io/ssolal/eaden-back:${EADEN_VERSION:-latest}
+  map-storage:
+    image: ghcr.io/ssolal/eaden-map-storage:${EADEN_VERSION:-latest}
+
+  status:
+    image: nginx:alpine
+    restart: ${RESTART_POLICY:-unless-stopped}
+    volumes:
+      - ./deploy/status/www:/usr/share/nginx/html:ro
+    labels:
+      traefik.enable: "true"
+      traefik.http.middlewares.strip-status.stripprefix.prefixes: "/status"
+      # plain HTTP (redirected to HTTPS by the web entrypoint)
+      traefik.http.routers.status.rule: "Host(`${DOMAIN}`) && PathPrefix(`/status`)"
+      traefik.http.routers.status.entryPoints: "web"
+      traefik.http.routers.status.middlewares: "strip-status@docker"
+      traefik.http.routers.status.priority: "100"
+      traefik.http.routers.status.service: "status"
+      traefik.http.services.status.loadbalancer.server.port: "80"
+      # HTTPS
+      traefik.http.routers.status-ssl.rule: "Host(`${DOMAIN}`) && PathPrefix(`/status`)"
+      traefik.http.routers.status-ssl.entryPoints: "websecure"
+      traefik.http.routers.status-ssl.middlewares: "strip-status@docker"
+      traefik.http.routers.status-ssl.priority: "100"
+      traefik.http.routers.status-ssl.service: "status"
+      traefik.http.routers.status-ssl.tls: "true"
+      traefik.http.routers.status-ssl.tls.certresolver: "myresolver"
